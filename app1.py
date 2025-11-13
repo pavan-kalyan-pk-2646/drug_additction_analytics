@@ -55,9 +55,58 @@ body { background-color: #f6f8fb; }
     margin-top: 6px; 
 }
 
-/* Sidebar tweaks */
-[data-testid="stSidebar"] { background-color: #f8fafc; border-right: 1px solid #e2e8f0; }
-[data-testid="stSidebar"] [data-testid="stTextInput"] > div > input { background-color: #f1f5f9; }
+/* ----- BLACK SIDEBAR THEME ----- */
+[data-testid="stSidebar"] {
+    background-color: #000000 !important;      /* Pure black background */
+    color: #ffffff !important;                 /* Text inside sidebar becomes white */
+    border-right: 1px solid #333333;
+}
+
+/* Sidebar text color override */
+[data-testid="stSidebar"] * {
+    color: #e5e7eb !important; /* Light gray readable text */
+}
+
+/* Inputs inside sidebar */
+[data-testid="stSidebar"] input {
+    background-color: #111111 !important;      /* Dark gray box */
+    color: #ffffff !important;                 /* White text */
+    border: 1px solid #444444 !important;
+    border-radius: 6px;
+}
+
+/* File uploader box */
+[data-testid="stSidebar"] [data-testid="stFileUploader"] {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #444444;
+}
+
+/* Browse button */
+[data-testid="stSidebar"] button {
+    background-color: #4F46E5 !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+[data-testid="stSidebar"] button:hover {
+    background-color: #3B82F6 !important;
+}
+
+/* Dropdown (selectbox) */
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+    background-color: #111111 !important;
+    color: white !important;
+    border-radius: 8px;
+    border: 1px solid #444444;
+}
+
+/* Slider labels */
+[data-testid="stSidebar"] .stSlider * {
+    color: #e5e7eb !important;
+}
+
 
 /* Metric Card Styling */
 .metric-card-container {
